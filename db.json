@@ -1,0 +1,24 @@
+{
+  "messages": [
+    {
+      "id": 1,
+      "input": "oi",
+      "response": "Olá! Como posso ajudar?"
+    },
+    {
+      "id": 2,
+      "input": "tudo bem?",
+      "response": "Tudo ótimo, obrigado por perguntar!"
+    },
+    {
+      "id": 3,
+      "input": "qual o seu nome?",
+      "response": "Eu não tenho nenhum nome em específico, sou apenas um teste."
+    },
+    {
+      "id": 4,
+      "input": "que horas são?",
+      "response": "Eu não tenho essa informação no momento, mas você pode consultá-la em seu dispositivo."
+    }
+  ]
+}
