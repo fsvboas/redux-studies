@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import StoreProvider from "./libs/redux/StoreProvider";
+import StoreProvider from "./libs/redux/chat/store/StoreProvider";
 
 export const metadata: Metadata = {
   title: "Redux Studies",

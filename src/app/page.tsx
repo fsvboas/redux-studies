@@ -1,5 +1,8 @@
+"use client";
+
+import ChatHistory from "./components/chat-history";
 import Container from "./components/core/container";
-import Footer from "./components/footer";
+import Form from "./components/form";
 import Header from "./components/header";
 
 export default function Home() {
@@ -8,12 +11,11 @@ export default function Home() {
       <Container>
         <Header />
         <main className="h-full w-full bg-black/20 my-8 p-4 rounded-lg">
-          <div>
-            <p className="font-bold text-white">Eu:</p>
-            <p className="text-white">Olá!</p>
-          </div>
+          <ChatHistory />
         </main>
-        <Footer />
+        <footer className="h-14 w-full">
+          <Form />
+        </footer>
       </Container>
     </div>
   );
