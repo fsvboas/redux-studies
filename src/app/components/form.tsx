@@ -9,7 +9,7 @@ import { Input } from "./core/input";
 
 const Form = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const { inputValue } = useSelector((state: RootState) => state.chat);
+  const { inputValue, status } = useSelector((state: RootState) => state.chat);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,6 +25,8 @@ const Form = () => {
     dispatch(setInputValue(""));
   };
 
+  const disabledState = status === "pending";
+
   return (
     <form onSubmit={handleSubmit} className="flex flex-row w-full space-x-4">
       <Input
@@ -33,10 +35,12 @@ const Form = () => {
         type="text"
         value={inputValue}
         onChange={(e) => dispatch(setInputValue(e.target.value))}
+        disabled={disabledState}
       />
       <Button
         className="rounded-full bg-white hover:bg-[#f3f3f3] transition-colors duration-300"
         type="submit"
+        disabled={disabledState}
       >
         <SendHorizontal className="text-black/95 h-4 w-4 p-0" />
       </Button>
