@@ -21,7 +21,7 @@ function* handleSendMessage(action: ReturnType<typeof sendMessage>) {
     if (!foundMessage) {
       const botMessage = {
         id: Date.now() + 1,
-        sender: "bot",
+        sender: "Virtual Assistant",
         content: "Desculpe, não entendi sua mensagem.",
       };
 
