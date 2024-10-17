@@ -26,14 +26,15 @@ function* handleSendMessage(action: ReturnType<typeof sendMessage>) {
       };
 
       yield put(receivedMessage(botMessage));
-    }
-    const botMessage = {
-      id: Date.now() + 1,
-      sender: "Virtual Assistant",
-      content: foundMessage!.response,
-    };
+    } else {
+      const botMessage = {
+        id: Date.now() + 1,
+        sender: "Virtual Assistant",
+        content: foundMessage!.response,
+      };
 
-    yield put(receivedMessage(botMessage));
+      yield put(receivedMessage(botMessage));
+    }
   } catch (error) {
     yield put(messageError(`Ocorreu um erro ao buscar uma resposta: ${error}`));
   }
